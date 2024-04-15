@@ -469,16 +469,6 @@ form>button:hover {
 /* Media queries para dispositivos de pantalla pequeña */
 
 @media screen and (max-width: 768px) {
-    body {
-        overflow-x: hidden;
-        margin: 0;
-    }
-    .init {
-        align-content: center;
-        background-color: black;
-        background-image: url(media/mountains.jpg);
-        background-attachment: fixed;
-    }
     
     .img-background {
         height: 100vh;
@@ -504,7 +494,7 @@ form>button:hover {
 
     .arrow{
         width: 35%;
-        margin: 3rem 16rem;
+        margin-top: 50rem;
         padding: 0;
     }
 
