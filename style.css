@@ -1,0 +1,529 @@
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes updown {
+    0% {
+        transform: translateY(0); 
+    }
+    50% {
+        transform: translateY(-1rem); 
+    }
+    100% {
+        transform: translateY(0); 
+    }
+}
+
+
+*{
+    animation: appear 1.5s ease-in-out forwards;
+}
+
+html {
+    /* 1rem = 10px */
+    font-size: 62.5%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: 400;
+    scroll-behavior: smooth;
+    background-color: #161618;
+    margin: 0 0;
+    padding: 0 0;
+}
+
+body {
+    overflow-x: hidden;
+    margin: 0;
+}
+
+.init {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0  auto;
+    align-content: center;
+    background-color: black;
+    background-attachment: fixed;
+    background-image: url(media/mountains.jpg);
+}
+
+.container-text-init {
+    width: 40%;
+    margin: 0 auto;
+    justify-content: center;
+    margin-bottom: 15rem;
+}
+
+.container-text-init>h1 {
+    font-size: 22pt;
+    padding-left: 45%;
+}
+
+.container-text-init>p {
+    font-size: 11pt;
+    text-align: center;
+    margin-left: 5%;
+    padding: 1% 5%;
+    background-color: rgba(57, 57, 57, 0.35);
+    border-radius: 2rem;
+}
+
+.arrow{
+    width: 10%;
+    height: auto;
+    object-fit: contain;
+    margin: 0 auto;
+    margin-top: 40%;
+    animation: appear 4s ease-in-out forwards;
+    position: absolute;
+}
+
+.arrow{
+    animation: updown 2s  2s infinite;
+}
+
+nav {
+    position: fixed;
+    display: block;
+    top: 1rem;
+    width: 40%;
+    background-color: #393939;
+    margin: 0 auto;
+    margin-top: 1%;
+    position: sticky;
+    z-index: 99;
+    padding: 0.5%;
+    border-radius: 2rem;
+}
+
+nav ul li {
+    padding: 0 1% 0 1%;
+    margin-left: 12%;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a:hover {
+    transition: ease-in 0.15s;
+    color: #000;
+}
+
+nav ul li a:not(:hover) {
+    transition: ease-in 0.15s;
+}
+
+nav li {
+    display: inline;
+    justify-content: space-between;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+.timeline-sec {
+    background-color: #161618;
+    height: 100vh;
+    z-index: 1;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 5%;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #ff9f55;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+    left: 0;
+}
+
+/* Place the container to the right */
+.right {
+    left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+    left: -16px;
+}
+
+/* The actual content */
+.content {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+
+    /* Place the timelime to the left */
+    .timeline::after {
+        left: 31px;
+    }
+
+    /* Full-width containers */
+    .container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    /* Make sure that all arrows are pointing leftwards */
+    .container::before {
+        left: 60px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+    }
+
+    /* Make sure all circles are at the same spot */
+    .left::after,
+    .right::after {
+        left: 15px;
+    }
+
+    /* Make all right containers behave like the left ones */
+    .right {
+        left: 0%;
+    }
+}
+
+.skills {
+    background-color: #212124;
+    height: 100vh;
+    z-index: -999;
+}
+
+.grid-container {
+    padding-top: 10%;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(3, 20rem);
+    grid-gap: 1%;
+    justify-content: center;
+}
+
+.grid-item {
+    width: 7.5rem;
+    height: 7.5rem;
+    border: dashed rgba(149, 149, 149, 0.35) 3px;
+    border-radius: 1rem;
+    text-align: center;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.content-grid{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    display: none;
+    z-index: 999;
+}
+
+#java{
+    width: 6rem;
+}
+
+#python{
+    width: 5.5rem;
+    padding-top: .7rem;
+}
+
+#html{
+    width: 7rem;
+    padding-top: .1rem;
+    filter: invert(1);
+}
+
+#css{
+    width: 8rem;
+    padding-right: .7rem;
+    filter: invert(1);
+}
+
+#linux{
+    width: 5.5rem;
+    padding-top: .5rem;
+    filter: contrast(10);
+}
+
+#plsql{
+    width: 6rem;
+    padding-top: 1.5rem;
+    filter: brightness(0) invert(1);
+}
+
+#github{
+    width: 6rem;
+    padding-top: .5rem;
+    filter: invert(1);
+}
+
+#metasploit{
+    width: 6rem;
+    padding-top: .6rem;
+    padding-left: .2rem;
+    filter: brightness(0) invert(1);
+}
+
+#htb{
+    width: 5.5rem;
+    padding-top:.6rem;
+    filter: invert(1);
+}
+
+.contact {
+    background-color: #818181;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-contenedor{
+    width: 35rem;
+    height: 45rem;
+    background: #e6e6e6;
+    border-radius: 1rem;
+    box-shadow: 0 0 40px -10px #000;
+    padding: 2rem 3rem;
+    max-width: calc(100vw - 4rem);
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    position: absolute;
+    z-index: 1;
+}
+
+form{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+form>h2 {
+    margin: 1rem 5rem;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding-bottom: 10px;
+    width: 18rem;
+    color: #78788c;
+    border-bottom: 3px solid #78788c;
+}
+
+form>input {
+    width: 100%;
+    padding: 1rem;
+    float: none;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background: none;
+    outline: none;
+    resize: none;
+    border: 0;
+    font-family: "Montserrat", sans-serif;
+    transition: all 0.3s;
+    border-bottom: 2px solid #bebed2;
+}
+
+form>input:focus {
+    border-bottom: 2px solid #78788c;
+}
+
+form>p:before {
+    content: attr(type);
+    display: block;
+    margin: 28px 0 0;
+    font-size: 14px;
+    color: #5a5a5a;
+}
+
+form>button {
+    float: right;
+    padding: .5rem 2rem;
+    margin: 4rem 0 0;
+    font-family: "Montserrat", sans-serif;
+    border: 2px solid #78788c;
+    border-radius: 1rem;
+    background: 0;
+    color: #5a5a6e;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+form>button:hover {
+    background: #78788c;
+    color: #fff;
+}
+
+.rrss {
+    display: flex;
+    justify-content: center;
+    margin-top: 60rem;
+    
+}
+
+.rrss>h1{
+    font-size: 4rem;
+    margin: 0 1rem;
+}
+
+.gh-rrss{
+    width: 4.4rem;
+    margin: 0 1rem;
+}
+
+.ln-rrss{
+    width: 4.4rem;
+    margin: 0 1rem;
+
+}
+
+/* Estilos generales */
+/* Agrega estilos generales aquí */
+
+/* Media queries para dispositivos de pantalla pequeña */
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+        margin: 0;
+    }
+    .init {
+        align-content: center;
+        background-color: black;
+        background-image: url(media/mountains.jpg);
+        background-attachment: fixed;
+    }
+    
+    .img-background {
+        height: 100vh;
+    }
+
+    .container-text-init {
+        width: 110%;
+        padding: 10rem ;
+    }
+
+    .container-text-init > h1 {
+        font-size: 4rem;
+        padding: 5rem;
+    }
+
+    .container-text-init > p {
+        font-size: 1.4rem;
+        padding: 0;
+        margin-top: 10rem;
+        background-color: hsla(0, 1%, 17%, .7);
+        color: #e6e6e6;
+    }
+
+    .arrow{
+        width: 35%;
+        margin: 3rem 16rem;
+        padding: 0;
+    }
+
+    nav{
+        font-size: 1rem;
+        width: 90%;
+        padding: .42rem;
+        margin: 2rem;
+    }
+
+    nav ul li {
+        padding: 0;
+    }
+    .grid-container {
+        grid-template-columns: repeat(3, 3fr);
+        gap: 3rem;
+        margin: 14rem 1rem;
+        display: inline-flexbox;
+    }
+    
+} 
+
