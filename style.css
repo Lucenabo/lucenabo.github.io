@@ -135,7 +135,6 @@ nav ul li a:not(:hover) {
 
 nav li {
     display: inline;
-    justify-content: space-between;
 }
 
 nav a {
@@ -471,15 +470,14 @@ nav a {
     }
 
     nav {
-        font-size: .64rem;
-        width: 33rem;
-        padding: 0.5rem;
-        margin: 2rem;
+        width: 95%; /* Se ajusta el ancho al 90% */
+        margin-top: 5%; /* Se ajusta el margen superior */
+        padding: 2%; /* Se ajusta el padding */
+        border-radius: 1rem; /* Se ajusta el radio del borde */
     }
 
-    nav ul li{
-        padding: 0;
-        justify-content: space-between;
+    nav ul li {
+        margin-left: 5%; /* Se ajusta el margen izquierdo */
     }
 
     .grid-container {
