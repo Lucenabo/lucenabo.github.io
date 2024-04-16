@@ -1,5 +1,5 @@
 @import url(media/JetBrainsMono-Regular.woff2);
-/* @keyframes appear {
+@keyframes appear {
     from {
         opacity: 0;
     }
@@ -18,7 +18,7 @@
     100% {
         transform: translateY(0); 
     }
-} */
+}
 
 @font-face {
     font-family: "JetBrainsMono";
