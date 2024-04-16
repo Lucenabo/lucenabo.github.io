@@ -25,7 +25,6 @@
     src: url("https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2") format("woff2"),
         url("https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff/JetBrainsMono-Regular.woff") format("woff"),
         url("https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/ttf/JetBrainsMono-Regular.ttf") format("truetype");
-    font-style: normal;
 }
 
 * {
@@ -468,7 +467,7 @@ nav ul li img {
     }
 
     nav {
-        width: 80%;
+        width: 77.5%;
         position: sticky;
         margin: 1rem 1rem;
         margin-left: 4.5rem;
@@ -479,8 +478,10 @@ nav ul li img {
         align-items: center;
     }
 
-    nav ul li {
-        margin-left: 5%; /* Se ajusta el margen izquierdo */
+    nav ul li img {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        height: 2.5rem;
     }
 
     .grid-container {
