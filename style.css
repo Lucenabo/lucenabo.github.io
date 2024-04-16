@@ -480,14 +480,7 @@ nav ul li img {
     }
 
     nav ul li {
-        padding: 1rem 0
-    }
-
-    nav ul li img {
-        margin-left: 5%;
-        padding-right: 2rem;
-        padding-left: 3rem;
-        height: 2rem;
+        margin-left: 5%; /* Se ajusta el margen izquierdo */
     }
 
     .grid-container {
