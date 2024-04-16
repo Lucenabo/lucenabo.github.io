@@ -1,5 +1,5 @@
 @import url(media/JetBrainsMono-Regular.woff2);
-@keyframes appear {
+/* @keyframes appear {
     from {
         opacity: 0;
     }
@@ -18,20 +18,20 @@
     100% {
         transform: translateY(0); 
     }
-}
+} */
 
 @font-face {
     font-family: "JetBrainsMono";
     src: url("https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2") format("woff2"),
         url("https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff/JetBrainsMono-Regular.woff") format("woff"),
         url("https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/ttf/JetBrainsMono-Regular.ttf") format("truetype");
-    font-weight: 400;
     font-style: normal;
 }
 
 * {
     animation: appear 1.5s ease-in-out forwards;
     font-family: "JetBrainsMono";
+    box-sizing: border-box;
 }
 
 html {
@@ -71,7 +71,7 @@ body {
 
 .container-text-init>h1 {
     font-size: 22pt;
-    padding-left: 30rem;
+    padding-left: 26rem;
     padding-bottom: 10rem;
 }
 
@@ -100,64 +100,59 @@ body {
 }
 
 nav {
-    position: fixed;
-    display: block;
     top: 1rem;
     width: 40%;
-    background-color: #393939;
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(115, 115, 115, 0.7);
     margin: 0 auto;
     margin-top: 1%;
     position: sticky;
     z-index: 99;
     padding: 0.5%;
     border-radius: 2rem;
-}
-
-nav ul li {
-    padding: 0 1% 0 1%;
-    margin-left: 12%;
+    margin-bottom: 10rem;
 }
 
 nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    /* Display items horizontally */
+    justify-content: space-between;
+}
+
+nav ul li {
+    padding: 0 1%;
+    justify-content: space-between;
 }
 
 nav ul li a:hover {
     transition: ease-in 0.15s;
-    color: #000;
-}
-
-nav ul li a:not(:hover) {
-    transition: ease-in 0.15s;
-}
-
-nav li {
-    display: inline;
+    filter: invert(1);
 }
 
 nav a {
     text-decoration: none;
-    color: white;
+}
+
+nav ul li img {
+    height: 3rem;
+    padding-left: 2rem;
+    padding-right: 10rem;
 }
 
 .timeline-sec {
     background-color: #161618;
     height: 100vh;
-    z-index: 1;
+    z-index: 2;
 }
 
-* {
-    box-sizing: border-box;
-}
-
-/* The actual timeline (the vertical ruler) */
 .timeline {
     position: relative;
-    max-width: 1200px;
+    max-width: 100rem;
     margin: 0 auto;
-    margin-top: 5%;
 }
 
 /* The actual timeline (the vertical ruler) */
@@ -255,7 +250,7 @@ nav a {
 
     /* Full-width containers */
     .container {
-        width: 100%;
+        width: 85%;
         padding-left: 70px;
         padding-right: 25px;
     }
@@ -283,21 +278,23 @@ nav a {
 .skills {
     background-color: #212124;
     height: 100vh;
-    z-index: -999;
+    z-index: 999;
+    margin: 0 auto;
 }
 
 .grid-container {
     padding-top: 10%;
     display: grid;
     place-items: center;
-    grid-template-columns: repeat(3, 20rem);
-    grid-gap: 1%;
+    grid-template-columns: repeat(3,25rem);
+    grid-gap: 2%;
     justify-content: center;
 }
 
 .grid-item {
     width: 7.5rem;
     height: 7.5rem;
+    /* Adjusted height of grid items */
     border: dashed rgba(149, 149, 149, 0.35) 3px;
     border-radius: 1rem;
     text-align: center;
@@ -315,7 +312,7 @@ nav a {
 }
 
 #java {
-    width: 6rem;
+    width: 6.5rem;
 }
 
 #python {
@@ -325,25 +322,25 @@ nav a {
 
 #html {
     width: 7rem;
-    padding-top: 0.1rem;
+    padding-top: 0.2rem;
     filter: invert(1);
 }
 
 #css {
-    width: 8rem;
-    padding-right: 0.7rem;
+    width: 8.6rem;
+    padding-right: 1.5rem;
     filter: invert(1);
 }
 
 #linux {
-    width: 5.5rem;
+    width: 6rem;
     padding-top: 0.5rem;
     filter: contrast(10);
 }
 
 #plsql {
-    width: 6rem;
-    padding-top: 1.5rem;
+    width: 6.5rem;
+    padding-top: 1.7rem;
     filter: brightness(0) invert(1);
 }
 
@@ -354,15 +351,14 @@ nav a {
 }
 
 #metasploit {
-    width: 6rem;
+    width: 6.2rem;
     padding-top: 0.6rem;
-    padding-left: 0.2rem;
     filter: brightness(0) invert(1);
 }
 
 #htb {
-    width: 5.5rem;
-    padding-top: 0.6rem;
+    width: 6rem;
+    padding-top: 0.7rem;
     filter: invert(1);
 }
 
@@ -376,6 +372,14 @@ nav a {
 
 .contactame {
     padding: 3rem;
+    position: absolute;
+}
+
+.email{
+    margin-top: 30rem;
+    border: solid 1px #a9a9a9;
+    padding: 1rem 2rem;
+    background-color: rgb(66, 66, 66, 0.6);
 }
 
 .boton {
@@ -429,19 +433,17 @@ nav a {
 @media screen and (max-width: 768px) {
     body {
         overflow-x: hidden;
-        margin: 0;
     }
 
     .img-background {
         height: 100vh;
     }
 
-    .init{
+    .init {
         display: flex;
         margin: 0 auto;
         justify-content: center;
     }
-    
 
     .container-text-init {
         width: 90%;
@@ -449,14 +451,12 @@ nav a {
     }
 
     .container-text-init>h1 {
-        font-size: 4rem;
         padding-left: 33%;
-        padding-top: 50%;
+        padding-top: 45%;
     }
 
     .container-text-init>p {
-        font-size: 1.4rem;
-        padding: 0 2rem;
+        margin-right: 5rem;
         margin-top: 10rem;
         background-color: hsla(0, 1%, 17%, 0.7);
         color: #e6e6e6;
@@ -464,25 +464,41 @@ nav a {
 
     .arrow {
         width: 35%;
-        margin-top: 50rem;
-        padding: 0;
+        margin-top: 45rem;
     }
 
     nav {
-        width: 95%; /* Se ajusta el ancho al 90% */
-        margin-top: 5%; /* Se ajusta el margen superior */
-        padding: 2%; /* Se ajusta el padding */
-        border-radius: 1rem; /* Se ajusta el radio del borde */
+        width: 80%;
+        position: sticky;
+        margin: 1rem 1rem;
+        margin-left: 4.5rem;
+    }
+
+    nav ul {
+        flex-direction: row;
+        align-items: center;
     }
 
     nav ul li {
-        margin-left: 5%; /* Se ajusta el margen izquierdo */
+        padding: 1rem 0
+    }
+
+    nav ul li img {
+        margin-left: 5%;
+        padding-right: 2rem;
+        padding-left: 3rem;
+        height: 2rem;
     }
 
     .grid-container {
-        grid-template-columns: repeat(3, 3fr);
-        gap: 3rem;
-        margin: 14rem 1rem;
-        display: inline-flexbox;
+        grid-template-columns: repeat(2, 10rem); /* Cambia a dos columnas */
+        grid-gap: 5%; /* Aumenta el espacio entre los elementos */
     }
+
+    .grid-item {
+        width: 7.5rem; /* Ajusta el ancho de los elementos */
+        height: 7.5rem; /* Ajusta la altura de los elementos */
+        border-width: 2px; /* Ajusta el grosor del borde */
+    }
+
 }
