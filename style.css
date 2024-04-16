@@ -469,14 +469,23 @@ nav a {
     }
 
     nav {
-        width: 95%; /* Se ajusta el ancho al 90% */
+        position: fixed;
+        display: block;
+        top: 96%;
+        background-color: #393939;
+        margin: 0 auto;
+        position: sticky;
+        z-index: 99;
+        border-radius: 0;
+        width: 100%; /* Se ajusta el ancho al 90% */
         margin-top: 5%; /* Se ajusta el margen superior */
-        padding: 2%; /* Se ajusta el padding */
-        border-radius: 1rem; /* Se ajusta el radio del borde */
+        padding: 3%; /* Se ajusta el padding */
     }
 
     nav ul li {
         margin-left: 5%; /* Se ajusta el margen izquierdo */
+        padding: 5rem 0.5rem;
+        padding-bottom: 2rem;
     }
 
     .grid-container {
