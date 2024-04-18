@@ -249,7 +249,7 @@ nav ul li img {
 
     /* Full-width containers */
     .container {
-        width: 80%;
+        width: 90%;
         padding-left: 70px;
         padding-right: 25px;
     }
@@ -463,6 +463,7 @@ nav ul li img {
 
     .arrow {
         width: 35%;
+        margin-right: 7%;
         margin-top: 45rem;
     }
 
