@@ -47,6 +47,7 @@ html {
 body {
     overflow-x: hidden;
     margin: 0;
+    padding: 0;
 }
 
 .init {
@@ -62,24 +63,26 @@ body {
 }
 
 .container-text-init {
-    width: 40%;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    margin-bottom: 30rem;
+    width: 90%; /* Adjust as needed */
+    margin: 0 auto;
 }
 
 .container-text-init>h1 {
     font-size: 22pt;
-    padding-left: 26rem;
-    padding-bottom: 10rem;
+    /* Remove padding-left */
+    text-align: center; /* Center the text */
 }
 
 .container-text-init>p {
     font-size: 11pt;
     text-align: center;
     color: #e6e6e6;
-    margin-left: 5%;
-    padding: 1% 5%;
+    width: 30%;
+    padding: 1rem;
     background-color: rgba(51, 51, 51, 0.7);
     border-radius: 2rem;
 }
@@ -92,6 +95,7 @@ body {
     margin-top: 40%;
     animation: appear 4s ease-in-out forwards;
     position: absolute;
+    margin-top: 1rem;
 }
 
 .arrow {
@@ -102,6 +106,8 @@ nav {
     top: 1rem;
     width: 40%;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     flex-direction: row;
     background-color: rgba(115, 115, 115, 0.7);
     margin: 0 auto;
@@ -124,7 +130,6 @@ nav ul {
 
 nav ul li {
     padding: 0 1%;
-    justify-content: space-between;
 }
 
 nav ul li a:hover {
@@ -138,8 +143,7 @@ nav a {
 
 nav ul li img {
     height: 3rem;
-    padding-left: 2rem;
-    padding-right: 10rem;
+    padding: 0 5rem;
 }
 
 .timeline-sec {
@@ -241,6 +245,18 @@ nav ul li img {
 
 /* Media queries - Responsive timeline on screens less than 600px wide */
 @media screen and (max-width: 600px) {
+
+    .timeline .container {
+        width: 100%;
+        padding: 1rem;
+        box-sizing: border-box;
+    }
+
+    .timeline .container:last-child {
+        position: relative;
+        left: 0;
+        top: 0;
+    }
 
     /* Place the timelime to the left */
     .timeline::after {
@@ -442,29 +458,37 @@ nav ul li img {
         display: flex;
         margin: 0 auto;
         justify-content: center;
+        min-height: 100vh;
     }
 
     .container-text-init {
         width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         justify-content: center;
+        flex-wrap: wrap;
     }
 
     .container-text-init>h1 {
-        padding-left: 33%;
-        padding-top: 45%;
+        padding-top: 2rem;
+        text-align: center;
     }
 
     .container-text-init>p {
-        margin-right: 5rem;
-        margin-top: 10rem;
+        margin-top: 2rem;
+        padding: 1rem;
         background-color: hsla(0, 1%, 17%, 0.7);
         color: #e6e6e6;
+        text-align: center;
+        width: 90%;     
+        margin-bottom: 20rem;
     }
 
     .arrow {
         width: 35%;
-        margin-right: 7%;
-        margin-top: 45rem;
+        align-self: center;
+        margin-top: 20rem;
     }
 
     nav {
@@ -484,7 +508,6 @@ nav ul li img {
         padding-right: 2rem;
         height: 2.5rem;
     }
-
     .grid-container {
         grid-template-columns: repeat(2, 10rem); /* Cambia a dos columnas */
         grid-gap: 5%; /* Aumenta el espacio entre los elementos */
