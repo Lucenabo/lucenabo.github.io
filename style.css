@@ -548,21 +548,24 @@ nav ul li img {
     }
 
     nav {
-        width: 77.5%;
+        width: 90.5%;
         position: sticky;
         margin: 1rem 1rem;
-        margin-left: 4.5rem;
+        margin-left: 2rem;
     }
 
     nav ul {
+        display: flex;
         flex-direction: row;
         align-items: center;
-    }
+        justify-content: center;
+
+        }
 
     nav ul li img {
-        padding-left: 2rem;
-        padding-right: 2rem;
         height: 2.5rem;
+        margin: 0 2rem;
+
     }
     .grid-container {
         grid-template-columns: repeat(2, 10rem); /* Cambia a dos columnas */
@@ -573,6 +576,23 @@ nav ul li img {
         width: 7.5rem; /* Ajusta el ancho de los elementos */
         height: 7.5rem; /* Ajusta la altura de los elementos */
         border-width: 2px; /* Ajusta el grosor del borde */
+    }
+
+    #project1{
+        margin: 1rem 1rem; /* Adjust the margin */
+        width: 30rem; /* Set a specific width */
+        height: 40rem; /* Set a specific height */
+        position: relative;
+        overflow: hidden; /* Add this to hide the parts of the image that are outside the container */
+        padding: 1rem;
+    }
+    
+    #project1-image{
+        width: 60%;
+        height: 50%;
+        scale: 1.1;
+        object-fit: cover;
+        object-position: 50%;
     }
 
 }
