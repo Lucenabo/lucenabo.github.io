@@ -8,6 +8,17 @@
     }
 }
 
+@keyframes slideWidth {
+    from {
+        width: 0;
+        left: 50%;
+    }
+    to {
+        width: 50%;
+        opacity: 1;
+    }
+}
+
 @keyframes updown {
     0% {
         transform: translateY(0); 
@@ -127,7 +138,7 @@ nav ul {
 }
 
 
-nav ul li a:hover {
+nav ul li:hover {
     transition: ease-in 0.15s;
     filter: invert(1);
 }
@@ -139,6 +150,37 @@ nav a {
 nav ul li img {
     height: 3rem;
     margin: 0 4rem;
+}
+
+.nav-item {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 0.5;
+}
+
+.nav-item:hover {
+    opacity: 1;
+}
+
+.active {
+    display: inline-block;
+    text-align: center;
+    position: relative; /* Added to position the pseudo-element */
+    transition: all 0.3s ease;
+    opacity: 1;
+}
+
+.active::after {
+    content: ""; /* Required for the pseudo-element to show */
+    display: block; /* Makes the pseudo-element behave like a block element */
+    width: 50%; /* Adjust this to control the width of the 'border' */
+    height: 2px; /* Thickness of the 'border' */
+    background-color: black; /* Color of the 'border' */
+    position: absolute;
+    left: 25%;
+    bottom: -5px; /* Adjust the vertical position of the 'border' */
+    animation: slideWidth .5s ease-in-out forwards;
+    transition: all 0.3s ease;
 }
 
 .timeline-sec {
@@ -422,6 +464,7 @@ nav ul li img {
 }
 
 .project-buttons>a>button{
+    cursor: pointer;
     background-color: #757575;
     padding: .5rem 2rem;
     border-radius: 1rem;

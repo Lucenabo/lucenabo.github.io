@@ -26,11 +26,11 @@
         </div>
         <nav id="navbar">
             <ul>
-                <li><a href="#home"> <img src="media/navbar/home.svg" alt=""> </a></li>
-                <li><a href="#timeline"> <img src="media/navbar/timeline.png" alt=""> </a></li>
-                <li><a href="#skills"> <img src="media/navbar/skills.png" alt=""></a></li>
-                <li><a href="#projects"><img src="media/navbar/project.svg" alt=""></a></li>
-                <li><a href="#contact"> <img src="media/navbar/contact.svg" alt=""></a></li>
+                <li id="home-nav"><a href="#home"> <img src="media/navbar/home.svg" class="nav-item"> </a></li>
+                <li id="timeline-nav"><a href="#timeline"> <img src="media/navbar/timeline.png" class="nav-item"> </a></li>
+                <li id="skills-nav"><a href="#skills"> <img src="media/navbar/skills.png" class="nav-item"></a></li>
+                <li id="projects-nav"><a href="#projects"><img src="media/navbar/project.svg" class="nav-item"></a></li>
+                <li id="contact-nav"><a href="#contact"> <img src="media/navbar/contact.svg" class="nav-item"></a></li>
             </ul>
         </nav>
 
@@ -150,7 +150,9 @@
                         Pequeña web en la que se muestra un reloj en tiempo real con horario de 12 horas. 
                         Este proyecto está hecho con HTML, CSS y JavaScript.
                     </p>
+                    <a href="projects/clock/clock.html">
                     <img id="project1-image" src="media/projectsImages/clockexample.png" alt="Foto reloj en JavaScript">
+                    </a>
                     <div class="project-buttons">
                         <a href="https://github.com/Lucenabo/JS-Clock"><button>GitHub</button></a>
                         <a href="projects/clock/clock.html"><button>Ver</button></a>
@@ -173,6 +175,7 @@
             </div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
