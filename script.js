@@ -24,14 +24,16 @@ document.addEventListener("DOMContentLoaded", () => {
     email.forEach(email => {
         email.addEventListener('click', () => {
             const email = 'alucena1002@gmail.com';
-            navigator.clipboard.writeText(email);
-            const alert = document.querySelectorAll('.emailCopyNotification')
-            alert[0].style.display = 'block';
-            alert[0].style.animation = 'appear 3s forwards';
-            alert[0].style.animation = 'appear 3s reverse forwards';
-            setTimeout(() => {
-                alert[0].style.display = 'none';
-            }, 3000);
+            navigator.clipboard.writeText(email).then(function(x) {
+                const alert = document.querySelectorAll('.emailCopyNotification')
+                alert[0].style.display = 'block';
+                alert[0].style.animation = 'appear 3s forwards';
+                alert[0].style.animation = 'appear 3s reverse forwards';
+                setTimeout(() => {
+                    alert[0].style.display = 'none';
+                }, 3000);
+            });
+
         });
     });
 });
