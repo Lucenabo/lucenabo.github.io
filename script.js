@@ -25,7 +25,13 @@ document.addEventListener("DOMContentLoaded", () => {
         email.addEventListener('click', () => {
             const email = 'alucena1002@gmail.com';
             navigator.clipboard.writeText(email);
-            alert('Email copied to clipboard');
+            const alert = document.querySelectorAll('.emailCopyNotification')
+            alert[0].style.display = 'block';
+            alert[0].style.animation = 'appear 3s forwards';
+            alert[0].style.animation = 'appear 3s reverse forwards';
+            setTimeout(() => {
+                alert[0].style.display = 'none';
+            }, 3000);
         });
     });
 });

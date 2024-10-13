@@ -485,6 +485,24 @@ nav ul li img {
     transform: scale(1.1);
 }
 
+.emailCopyNotification{
+    display: none;
+    position: fixed;
+    margin-top: 2rem;
+    top: 0;
+    right: 15%;
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid rgba(255, 255, 0, 0.7);
+    padding: 1rem;
+    border-radius: .5rem;
+}
+
+.emailCopyNotification>p{
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.5rem;
+    margin: 0;
+}
+
 
 .contact {
     background-color: #818181;
