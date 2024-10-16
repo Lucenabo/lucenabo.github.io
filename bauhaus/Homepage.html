@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BauhausDev - Functional Web Design</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="media/favicon.ico" type="image/x-icon">
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <script src="https://unpkg.com/lucide@0.453.0/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+<div class="min-h-screen bg-white text-black font-sans">
+    <!-- Header -->
+    <header class="p-4 bg-black text-white sticky top-0 z-50">
+        <nav class="container mx-auto flex justify-between items-center">
+            <div class="text-2xl font-bold">BauhausDev</div>
+            <ul class="hidden md:flex space-x-4">
+                <li><a href="#features" class="hover:text-yellow-400">Features</a></li>
+                <li><a href="#services" class="hover:text-yellow-400">Services</a></li>
+                <li><a href="#pricing" class="hover:text-yellow-400">Pricing</a></li>
+                <li><a href="#testimonials" class="hover:text-yellow-400">Testimonials</a></li>
+                <li><a href="#faq" class="hover:text-yellow-400">FAQ</a></li>
+                <li><a href="#contact" class="hover:text-yellow-400">Contact</a></li>
+            </ul>
+            <button id="getStartedBtn" class="btn bg-yellow-400 hover:bg-yellow-500 text-black">Get Started</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="container mx-auto px-4 py-16 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div id="HeroText">
+            <h1 class="text-5xl font-bold mb-4">Functional Web Design for the Modern Era</h1>
+            <p class="text-xl mb-6">We create minimalist, powerful websites that drive results and delight users.</p>
+            <button class="btn bg-red-600 hover:bg-red-700 text-white">Start Your Project</button>
+        </div>
+        <div id="WindowLogo" class="grid grid-cols-2 gap-4">
+            <div class="bg-blue-500 h-40 rounded-tl-3xl"></div>
+            <div class="bg-yellow-400 h-40 rounded-tr-3xl"></div>
+            <div class="bg-red-600 h-40 rounded-bl-3xl"></div>
+            <div class="bg-black h-40 rounded-br-3xl"></div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="bg-gray-100 py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8 text-center">Why Choose Us</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div id="lightning" class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center">
+                    <i data-lucide="zap" class="text-yellow-400 w-12 h-12 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Lightning Fast</h3>
+                    <p class="text-center">Optimized for speed and performance</p>
+                </div>
+                <div id="scalable" class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center">
+                    <i data-lucide="layers" class="text-blue-500 w-12 h-12 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Scalable</h3>
+                    <p class="text-center">Built to grow with your business</p>
+                </div>
+                <div id="secure" class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center">
+                    <i data-lucide="shield" class="text-red-600 w-12 h-12 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Secure</h3>
+                    <p class="text-center">Top-notch security measures</p>
+                </div>
+                <div id="user-friendly" class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center">
+                    <i data-lucide="star" class="text-black w-12 h-12 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">User-Friendly</h3>
+                    <p class="text-center">Intuitive designs for the best UX</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8 text-center">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-blue-500 text-white p-6 rounded-lg flex flex-col items-center">
+                    <i data-lucide="circle" class="w-16 h-16 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Web Design</h3>
+                    <p class="text-center">Clean, functional designs that engage users and reflect your brand.</p>
+                </div>
+                <div class="bg-red-600 text-white p-6 rounded-lg flex flex-col items-center">
+                    <i data-lucide="square" class="w-16 h-16 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Development</h3>
+                    <p class="text-center">Robust, scalable web applications built to perform and grow with you.</p>
+                </div>
+                <div class="bg-yellow-400 text-black p-6 rounded-lg flex flex-col items-center">
+                    <i data-lucide="triangle" class="w-16 h-16 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Branding</h3>
+                    <p class="text-center">Distinctive visual identities that make your business stand out.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="bg-gray-100 py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8 text-center">Pricing Plans</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div id="basic-container" class="bg-white p-6 rounded-lg shadow-md ">
+                    <h3 class="text-2xl font-bold mb-4">Basic</h3>
+                    <p class="text-4xl font-bold mb-4">$999</p>
+                    <ul class="mb-6 space-y-2">
+                        <li>5-page website</li>
+                        <li>Responsive design</li>
+                        <li>Basic SEO</li>
+                        <li>1 month of support</li>
+                    </ul>
+                    <button class="btn w-full bg-blue-500 hover:bg-blue-600 text-white">Choose Plan</button>
+                </div>
+                <div id="pro-container" class="bg-black text-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold mb-4">Pro</h3>
+                    <p class="text-4xl font-bold mb-4">$2,499</p>
+                    <ul class="mb-6 space-y-2">
+                        <li>10-page website</li>
+                        <li>Responsive design</li>
+                        <li>Advanced SEO</li>
+                        <li>E-commerce integration</li>
+                        <li>3 months of support</li>
+                    </ul>
+                    <button class="btn w-full bg-yellow-400 hover:bg-yellow-500 text-black">Choose Plan</button>
+                </div>
+                <div id="custom-container" class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold mb-4">Enterprise</h3>
+                    <p class="text-4xl font-bold mb-4">Custom</p>
+                    <ul class="mb-6 space-y-2">
+                        <li>Unlimited pages</li>
+                        <li>Custom design</li>
+                        <li>Advanced features</li>
+                        <li>Priority support</li>
+                        <li>Dedicated manager</li>
+                    </ul>
+                    <button class="btn w-full bg-red-600 hover:bg-red-700 text-white">Contact Us</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8 text-center">What Our Clients Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <p class="mb-4">"BauhausDev transformed our online presence. Their minimalist approach perfectly
+                        captured our brand essence."</p>
+                    <p class="font-bold">- Jane Doe, CEO of TechCorp</p>
+                </div>
+                <div class="bg-yellow-400 p-6 rounded-lg shadow-md">
+                    <p class="mb-4">"The team's attention to detail and focus on user experience resulted in a website
+                        that our customers love."</p>
+                    <p class="font-bold">- John Smith, Founder of StartupX</p>
+                </div>
+                <div class="bg-blue-500 text-white p-6 rounded-lg shadow-md">
+                    <p class="mb-4">"Working with BauhausDev was a game-changer for our e-commerce site. Sales have
+                        increased by 200% since launch."</p>
+                    <p class="font-bold">- Sarah Johnson, CMO of FashionCo</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="bg-gray-100 py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+            <div class="max-w-2xl mx-auto">
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-header">What is Bauhaus-inspired web design?</button>
+                        <div class="accordion-content">
+                            <p>Bauhaus-inspired web design incorporates principles of minimalism, functionality, and
+                                bold use of color and geometric shapes. It focuses on clean layouts that prioritize user
+                                experience and content presentation.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">How long does it take to complete a project?</button>
+                        <div class="accordion-content">
+                            <p>Project timelines vary depending on the scope and complexity. A basic website might take
+                                4-6 weeks, while more complex projects can take 3-6 months. We'll provide a detailed
+                                timeline during our initial consultation.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">Do you offer ongoing support and maintenance?</button>
+                        <div class="accordion-content">
+                            <p>Yes, we offer various support and maintenance packages to ensure your website remains
+                                up-to-date, secure, and performing optimally. We can tailor a package to suit your
+                                specific needs.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">Can you help with content creation?</button>
+                        <div class="accordion-content">
+                            <p>We have a team of content strategists and copywriters who can help create compelling,
+                                SEO-friendly content for your website. This service can be added to any of our web
+                                design packages.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-black text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4">Ready to Start Your Project?</h2>
+            <p class="mb-8 text-xl">Let's create something amazing together.</p>
+            <button id="getInTouch" class="btn bg-yellow-400 hover:bg-yellow-500 text-black text-lg px-8 py-3">Get in Touch</button>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8 text-center">Contact Us</h2>
+            <div class="max-w-md mx-auto">
+                <form class="space-y-4">
+                    <input type="text" placeholder="Name" class="input bg-white text-black border-gray-300">
+                    <input type="email" placeholder="Email" class="input bg-white text-black border-gray-300">
+                    <textarea placeholder="Message" rows="4"
+                              class="textarea w-full p-2 bg-white text-black rounded border border-gray-300"></textarea>
+                    <button class="btn w-full bg-red-600 hover:bg-red-700 text-white">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-bold mb-4">BauhausDev</h3>
+                    <p>Functional web design for the modern era.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#features" class="hover:underline">Features</a></li>
+                        <li><a href="#services" class="hover:underline">Services</a></li>
+                        <li><a href="#pricing" class="hover:underline">Pricing</a></li>
+                        <li><a href="#contact" class="hover:underline">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:underline">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:underline">Terms of Service</a></li>
+                        <li><a href="#" class="hover:underline">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-600 hover:text-black"><i data-lucide="facebook"></i></a>
+                        <a href="#" class="text-gray-600 hover:text-black"><i data-lucide="twitter"></i></a>
+                        <a href="#" class="text-gray-600 hover:text-black"><i data-lucide="instagram"></i></a>
+                        <a href="#" class="text-gray-600 hover:text-black"><i data-lucide="linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-200 text-center">
+                <p>&copy; 2024 BauhausDev. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
