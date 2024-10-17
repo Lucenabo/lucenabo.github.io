@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let timeSpent = 0;
     const fiveMinutesNotification = document.querySelector('.five-minute-notificaction')
     // Set the time limit (5 minutes = 300 seconds)
-    const timeLimit = 5;
+    const timeLimit = 300;
 
     // Create a timer that increases the counter every second
     const timer = setInterval(() => {
