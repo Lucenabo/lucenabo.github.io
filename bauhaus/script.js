@@ -15,16 +15,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.documentElement.setAttribute('lang', navigator.language)
 
-
-    const hiddenText = function () {
-        setTimeout(() => {
-            HeroText.style.setProperty('visibility', 'visible');
-            HeroText.style.setProperty('animation', 'slideInLeft .5s ease-in-out');
-        }, 1000);
-    };
-
-    hiddenText();
-
     function animationType (animation, block) {
         return () => {
             const children = block.querySelectorAll('*')
@@ -125,4 +115,21 @@ document.addEventListener('DOMContentLoaded', function() {
         e.preventDefault();
         alert('Form submitted!is a demo, no actual submission occurred)');
     });
+
+    let timeSpent = 0;
+    const fiveMinutesNotification = document.querySelector('.five-minute-notificaction')
+    // Set the time limit (5 minutes = 300 seconds)
+    const timeLimit = 5;
+
+    // Create a timer that increases the counter every second
+    const timer = setInterval(() => {
+        timeSpent++;
+
+        // If the user has spent more than the time limit, show an alert
+        if (timeSpent >= timeLimit) {
+            fiveMinutesNotification.style.setProperty('display', 'block');
+            clearInterval(timer);  // Stop the timer after the alert
+        }
+    }, 1000);
+
 });

@@ -148,12 +148,18 @@ body, html {
     font-family: Arial, sans-serif;
 }
 
-#WindowLogo {
-    animation: fadeIn 2s;
-}
-
-#HeroText {
-    visibility: hidden;
+.five-minute-notificaction {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fbbf24;
+    color: #000;
+    padding: 1rem;
+    text-align: center;
+    animation: slideInLeft 1s ease;
+    z-index: 1000;
 }
 
 .accordion-content {
@@ -193,7 +199,6 @@ form label {
     display: block;
     margin-bottom: 0.5rem;
     font-size: 1.2rem;
-    color: var(--green);
 }
 
 form input[type="email"],
@@ -216,13 +221,13 @@ form button {
     width: 100%;
     padding: 1rem;
     font-size: 1.4rem;
-    background-color: var(--green);
     color: var(--white);
     border: none;
     border-radius: 3px;
     cursor: pointer;
     transition: background-color 0.2s ease-in-out;
 }
+
 
 /* Utility classes */
 .min-h-screen { min-height: 100vh; }
